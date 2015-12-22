@@ -49,23 +49,29 @@ class Datamahasiswa extends CI_Controller {
             while(! feof($file))
             {
                 $arrdata=fgetcsv($file);
-               // print_r($arrdata);
+                
+                //menghindari null
+                if($arrdata[0]==NULL)
+                {
+                    continue;
+                }
                 $data=array(
-                        'id_perguruan_tinggi'=>$arrdata[1],
-                        'Nama'=>$arrdata[0],
-                        'Email'=>$arrdata[2],
-                        'Fakultas'=>$arrdata[3],
-                        'Jurusan'=>$arrdata[4],
-                        'Tahun_angkatan' => $arrdata[5],
-                        'Facebook' => $arrdata[6],
-                        'Twitter' => $arrdata[7]
+                        'id_perguruan_tinggi'=>$arrdata['1'],
+                        'Nama'=>$arrdata['0'],
+                        'Email'=>$arrdata['2'],
+                        'Fakultas'=>$arrdata['3'],
+                        'Jurusan'=>$arrdata['4'],
+                        'Tahun_angkatan' => $arrdata['5'],
+                        'Facebook' => $arrdata['6'],
+                        'Twitter' => $arrdata['7']
                     );
-                print_r($data);
                 $this->mmahasiswa->adddata($data);
             }
 
             fclose($file);   
         }
+        
+        redirect("database\datamahasiswa");
     }
     
 }
