@@ -32,6 +32,35 @@ class Datamahasiswa extends CI_Controller {
 		$this->loadview($data);
 	}
     
+    public function tambahdata()
+    {
+        if($this->input->post("submit"))
+        {
+            $nama=$this->input->post("nama");
+            $id_perguruan_tinggi=$this->input->post("univ");
+            $email=$this->input->post("email");
+            $fakultas=$this->input->post("fakultas");
+            $jurusan=$this->input->post("jurusan");
+            $tahun_angkatan=$this->input->post("angkatan");
+            $facebook=$this->input->post("facebook");
+            $twitter=$this->input->post("twitter");
+            
+            $data=array(
+                        'id_perguruan_tinggi'=>$id_perguruan_tinggi,
+                        'Nama'=>$nama,
+                        'Email'=>$email,
+                        'Fakultas'=>$fakultas,
+                        'Jurusan'=>$jurusan,
+                        'Tahun_angkatan' => $tahun_angkatan,
+                        'Facebook' => $facebook,
+                        'Twitter' => $twitter
+                    );
+                $this->mmahasiswa->adddata($data);
+        }
+        
+        redirect("database\datamahasiswa");
+    }
+    
     public function uploadcsv()
     {
         $config['upload_path'] = '.\\uploads';

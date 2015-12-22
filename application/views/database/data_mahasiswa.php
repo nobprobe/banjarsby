@@ -87,50 +87,48 @@
                     <div class="tab-content">
                         <div id="isidata" class="tab-pane fade in active">
                             <div class="row">
-                                <form role="dialog">
+                                <form role="dialog" method="post" action="datamahasiswa/tambahdata">
                                 <div class="col-lg-6">
                                     <div class="form-group">
                                         <label for="nama">Nama Lengkap</label>
-                                        <input type="text" class="form-control" id="nama">
+                                        <input type="text" class="form-control" id="nama" name="nama">
                                     </div>
                                      <div class="form-group">
                                         <label for="univ">Universitas</label>
-                                        <select id="univ" class="form-control">
-                                         
+                                        <select id="univ" class="form-control" name="univ">
+                                            <option>1</option>
                                          </select>
                                     </div>
                                      <div class="form-group">
                                         <label for="fakultas">Fakultas</label>
-                                        <input type="text" class="form-control" id="fakultas">
+                                        <input type="text" class="form-control" id="fakultas" name="fakultas">
                                     </div>
                                      <div class="form-group">
                                         <label for="jurusan">Jurusan</label>
-                                        <input type="text" class="form-control" id="jurusan">
+                                        <input type="text" class="form-control" id="jurusan" name="jurusan">
                                     </div>
                                     <div class="form-group">
                                         <label for="angkatan">Tahun angkatan</label>
-                                        <input type="text" class="form-control" id="jurusan">
+                                        <input type="text" class="form-control" id="angkatan" name="angkatan">
                                     </div>
                                 </div>
                                     
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <label for="nama">Nama Lengkap</label>
-                                        <input type="text" class="form-control" id="nama">
+                                        <label for="email">Email</label>
+                                        <input type="email" class="form-control" id="email" name="email">
                                     </div>
                                      <div class="form-group">
-                                        <label for="univ">Universitas</label>
-                                        <select id="univ" class="form-control">
-                                         
-                                         </select>
+                                        <label for="facebook">Facebook</label>
+                                        <input type="text" class="form-control" id="facebook" name="facebook">
                                     </div>
                                      <div class="form-group">
-                                        <label for="fakultas">Fakultas</label>
-                                        <input type="text" class="form-control" id="fakultas">
+                                        <label for="fakultas">Twitter</label>
+                                        <input type="text" class="form-control" id="twitter" name="twitter">
                                     </div>
-                                     <div class="form-group">
-                                        <label for="jurusan">Jurusan</label>
-                                        <input type="text" class="form-control" id="jurusan">
+                                    <div class="form-group">
+                                        <button class="btn btn-success" type="submit" value="submit" name="submit">Submit</button>
+                                        <button class="btn btn-danger" type="reset">Reset</button>
                                     </div>
                                 </div>
                                 </form>
