@@ -37,4 +37,7 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="<?php echo base_url() ?>assets/dist/js/sb-admin-2.js"></script>
+    
+    <!-- Form validation -->
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
 </head>

@@ -43,4 +43,20 @@ class Mmahasiswa extends CI_Model {
         
         return $res;
     }
+    
+    public function getptn()
+    {
+        $res='';
+        $sql=$this->db->get('perguruan_tinggi');
+        
+        if($sql->num_rows() > 0)
+        {
+            foreach($sql->result() as $data)
+            {
+                $res[]=$data;
+            }
+        }
+        return $res;
+    }
+    
 }
