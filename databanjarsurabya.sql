@@ -1,6 +1,6 @@
 /*
 SQLyog Enterprise - MySQL GUI v7.02 
-MySQL - 5.6.21 : Database - databanjarsurabaya
+MySQL - 5.5.5-10.1.9-MariaDB : Database - databanjarsurabaya
 *********************************************************************
 */
 
@@ -14,6 +14,23 @@ MySQL - 5.6.21 : Database - databanjarsurabaya
 CREATE DATABASE /*!32312 IF NOT EXISTS*/`databanjarsurabaya` /*!40100 DEFAULT CHARACTER SET latin1 */;
 
 USE `databanjarsurabaya`;
+
+/*Table structure for table `datawarga` */
+
+DROP TABLE IF EXISTS `datawarga`;
+
+CREATE TABLE `datawarga` (
+  `id_warga` varchar(6) NOT NULL,
+  `nama_lengkap` varchar(50) DEFAULT NULL,
+  `alamat` text,
+  `jenis_kelamin` char(1) DEFAULT NULL,
+  `tanggal_lahir` date DEFAULT NULL,
+  `pekerjaan` varchar(30) DEFAULT NULL,
+  `no_telpon` varchar(15) DEFAULT NULL,
+  PRIMARY KEY (`id_warga`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `datawarga` */
 
 /*Table structure for table `login_mahasiswa` */
 
