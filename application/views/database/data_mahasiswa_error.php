@@ -17,6 +17,14 @@
                     </div>
                     
                     <div class="form-group">
+                                        <label for="jeniskelamin">Jenis Kelamin</label>
+                                        <select id="jeniskelamin" class="form-control" name="jeniskelamin" required>
+                                            <option>L</option>   
+                                            <option>P</option>   
+                                         </select>
+                                    </div>
+                    
+                    <div class="form-group">
                         <label for="univ">Universitas</label>
                         <select id="univ" class="form-control" name="univ" required>
                             <?php if (!empty($ptn)) { ?>

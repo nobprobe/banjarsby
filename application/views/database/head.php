@@ -40,4 +40,35 @@
     
     <!-- Form validation -->
     <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
+    
+    <script>
+        function showinsertdata()
+        {
+            
+            $.ajax({url: "<?php echo base_url() ?>database/ajaxform/formtambahdata", success: function(result){
+                document.getElementById('#modal_content').innerHTML ="result";
+                }});
+            
+            $("#uploadModal").modal("show");
+        }
+    </script>
+    
+    <script>
+        function showdatadetail(id)
+        {
+            $.post("demo_test_post.asp",
+            {
+                id_mahasiswa=id;
+            },
+                function(data, status){
+                    alert("Data: " + data + "\nStatus: " + status);
+                });
+        }
+    </script>
+        
+        <script>
+        function myFunction() {
+    alert("Hello! I am an alert box!!");
+}
+    </script>
 </head>

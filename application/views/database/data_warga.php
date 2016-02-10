@@ -200,9 +200,8 @@
                                         </div>
                                     </form>
                                 </div>
-                                
-                            </form>
                             </div>
+            </form>
       </div>
       <div class="modal-footer">
           <button class="btn btn-success" type="button" value="submit" onclick="submitform()">Submit</button>
