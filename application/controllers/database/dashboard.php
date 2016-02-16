@@ -12,7 +12,7 @@ class Dashboard extends CI_Controller {
     {
         $this->load->view("database/head");
         $this->load->view("database/header");
-        $this->load->view("database/sidebar");
+        //$this->load->view("database/sidebar");
         $this->load->view("database/dashboard");
         $this->load->view("database/footer");
             

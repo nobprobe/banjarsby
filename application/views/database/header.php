@@ -25,4 +25,43 @@
                 </li>
                 <!-- /.dropdown -->
             </ul>
+            
+            <ul class="nav navbar-top-links">
+                <li><a href="<?php echo base_url()?>database/dashboard"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a></li>
+                
+                <li class="dropdown">
+                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                     <i class="fa fa-edit fa-fw"></i>   Data  <i class="fa fa-caret-down"></i>
+                    </a>
+                    
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="<?php echo base_url()?>database/datamahasiswa">Data Mahasiswa</a>
+                        </li>
+                        <li>
+                            <a href="<?php echo base_url()?>database/datawarga">Data Warga</a>
+                        </li>
+                        <li>
+                            <a href="<?php echo base_url()?>database/dataperguruantinggi">Perguruan Tinggi</a>
+                        </li>
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="fa fa-sitemap fa-fw"></i> Manajemen Admin <i class="fa fa-caret-down"></i>
+                    </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="<?php echo base_url()?>database/manageadmin">Tambah Admin</a>
+                                </li>
+                                <li>
+                                    <a href="login.html">Admin List</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li> 
+                
+            </ul>
+    </nav>
             <!-- /.navbar-top-links -->

@@ -13,7 +13,7 @@ class Datamahasiswa extends CI_Controller {
     {
         $this->load->view("database/head");
         $this->load->view("database/header");
-        $this->load->view("database/sidebar");
+       // $this->load->view("database/sidebar");
         $this->load->view("database/data_mahasiswa", $data);
         $this->load->view("database/footer");
             
@@ -57,7 +57,7 @@ class Datamahasiswa extends CI_Controller {
 	
         $this->load->view("database/head");
         $this->load->view("database/header");
-        $this->load->view("database/sidebar");
+        //$this->load->view("database/sidebar");
         $this->load->view("database/data_mahasiswa_error",$data);
         $this->load->view("database/footer");
     }

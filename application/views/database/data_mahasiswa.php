@@ -1,4 +1,4 @@
-<body onload="showupload()">
+<body>
 <div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12">
@@ -13,8 +13,8 @@
     <div class="row">
         
         <div class="col-lg-2">
-            <button onclick="showinsertdata()" class="btn btn-success" >Tambah Data</button>
-            <button onclick="myFunction()">Click me</button>
+            <button onclick="showinsertdata('<?php echo base_url() ?>database/ajaxform/formtambahdata')" class="btn btn-success">Tambah Data</button>
+            
         </div>
     </div>
     
@@ -69,11 +69,27 @@
             </div>
             
             <div class="modal-body">
-                <div id="modal_content">
+                    <div id="modal_content">
                  
-                </div>
+                    </div>
             
-            <div class="modal-footer"></div>
+                <div class="modal-footer"></div>
+            </div>
         </div>
     </div>
 </div>
+    
+    <script src="<?php echo base_url() ?>assets/js/datamahasiswa.js"></script>
+    
+    <script>
+        function showdatadetail(id)
+        {
+            $.post("demo_test_post.asp",
+            {
+                id_mahasiswa=id;
+            },
+                function(data, status){
+                    alert("Data: " + data + "\nStatus: " + status);
+                });
+        }
+    </script>
